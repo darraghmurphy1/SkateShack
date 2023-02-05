@@ -1,13 +1,42 @@
-[    {        "model": "products.category",        "pk": 1,        "fields": {            "name": "Decks"        }    }, 
-
-{        "model": "products.category",        "pk": 2,        "fields": {            "name": "Trucks"        }    },  
-
-{        "model": "products.category",        "pk": 3,        "fields": {            "name": "Wheels"        }    },
-
-{        "model": "products.category",        "pk": 4,        "fields": {            "name": "Accessories"        }    },
-
-{        "model": "products.category",        "pk": 5,        "fields": {            "name": "Completes"        }    },
-
-
-
-]
+[
+    {
+      "pk": 1,
+      "model": "products.category",
+      "fields": {
+        "name": "decks",
+        "friendly_name": "Decks"
+      }
+    },
+    {
+      "pk": 2,
+      "model": "products.category",
+      "fields": {
+        "name": "trucks",
+        "friendly_name": "Trucks"
+      }
+    },
+    {
+      "pk": 3,
+      "model": "products.category",
+      "fields": {
+        "name": "wheels",
+        "friendly_name": "Wheels"
+      }
+    },
+    {
+      "pk": 4,
+      "model": "products.category",
+      "fields": {
+        "name": "accessories",
+        "friendly_name": "Accessories"
+      }
+    },
+    {
+      "pk": 5,
+      "model": "products.category",
+      "fields": {
+        "name": "completes",
+        "friendly_name": "Completes"
+      }
+    }
+  ]

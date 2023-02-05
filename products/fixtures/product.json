@@ -35,7 +35,7 @@
         "name": "Wheels",
         "description": "Skateboard wheels",
         "price": 16.99,
-        "category": 13,
+        "category": 3,
         "rating": 4.1,
         "image_url": "",
         "image": ""
