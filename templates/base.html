@@ -12,7 +12,7 @@
 
 </head>
 <body>
-  <nav class="navbar navbar-default">
+  <!-- <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
         <a class="navbar-brand" href="#">
@@ -23,7 +23,7 @@
         <li><a href="productlist.html">Products</a></li>
         <li><a href="">Cart</a></li>
         <li><a href="#">Orders</a></li>
-      </ul>
+      </ul> -->
       <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
         <ul class="list-inline list-unstyled text-center text-lg-right my-0">
             <li class="list-inline-item dropdown">
@@ -64,6 +64,20 @@
       </div>
     </div>
   </nav>
+  <div class="row bg-white">
+    <nav class="navbar navbar-expand-lg navbar-light w-100">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        {% include 'includes/mobilenav.html' %}
+        {% include 'includes/navbar.html' %}
+    </nav>
+</div>
+<div id="delivery-banner" class="row text-center">
+    <div class="col bg-black text-white">
+        <h4 class="logo-font my-1">Free delivery on orders over ${{ free_shipping_threshold }}!</h4>                
+    </div>            
+</div>
   <div class="container">
     {% block content %}
     {% endblock %}
