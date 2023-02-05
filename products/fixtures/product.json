@@ -1,0 +1,143 @@
+[
+    {
+      "pk": 1,
+      "model": "products.product",
+      "fields": {
+        "sku": "gb0000000001",
+        "name": "Complete skateboard",
+        "description": "complete skateboard ready for use",
+        "price": 89.99,
+        "category": 5,
+        "rating": 4.2,
+        "image_url": "",
+        "image": ""
+      }
+    },
+    {
+      "pk": 2,
+      "model": "products.product",
+      "fields": {
+        "sku": "gb0000000002",
+        "name": "Trucks",
+        "description": "Super-nutritious snack — perfect for spreading on toast, rice crackers, or your favourite fruit",
+        "price": 33.50,
+        "category": 2,
+        "rating": 4.8,
+        "image_url": "",
+        "image": ""
+      }
+    },
+    {
+      "pk": 3,
+      "model": "products.product",
+      "fields": {
+        "sku": "gb0000000003",
+        "name": "Wheels",
+        "description": "Skateboard wheels",
+        "price": 16.99,
+        "category": 13,
+        "rating": 4.1,
+        "image_url": "",
+        "image": ""
+      }
+    },
+    {
+      "pk": 4,
+      "model": "products.product",
+      "fields": {
+        "sku": "gb0000000004",
+        "name": "Grip Tape",
+        "description": "heavy duty grip tape",
+        "price": 4.99,
+        "category": 4,
+        "rating": 4.8,
+        "image_url": "https://images.unsplash.com/photo-1551870573-6f5e93e660fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+        "image": "1551870573.jpg"
+      }
+    },
+    {
+        "pk": 5,
+        "model": "products.product",
+        "fields": {
+          "sku": "gb0000000005",
+          "name": "Complete skateboard 2.0",
+          "description": "A cheaper alternative",
+          "price": 49.99,
+          "category": 5,
+          "rating": 3.8,
+          "image_url": "",
+          "image": ""
+        }
+      },
+      {
+        "pk": 6,
+        "model": "products.product",
+        "fields": {
+          "sku": "gb0000000006",
+          "name": "Complete skateboard 3.0",
+          "description": "Our best beginner complete",
+          "price": 105.99,
+          "category": 5,
+          "rating": 4.7,
+          "image_url": "",
+          "image": ""
+        }
+      },
+      {
+        "pk": 7,
+        "model": "products.product",
+        "fields": {
+          "sku": "gb0000000007",
+          "name": "SkateTool",
+          "description": "All the tools you'll need",
+          "price": 8.99,
+          "category": 4,
+          "rating": 4.5,
+          "image_url": "",
+          "image": ""
+        }
+      },
+      {
+        "pk": 8,
+        "model": "products.product",
+        "fields": {
+          "sku": "gb0000000008",
+          "name": "Beginner Trucks",
+          "description": "Cheap trucks ideal for beginners",
+          "price": 18.99,
+          "category": 2,
+          "rating": 3.9,
+          "image_url": "",
+          "image": ""
+        }
+      },
+      {
+        "pk": 9,
+        "model": "products.product",
+        "fields": {
+          "sku": "gb0000000009",
+          "name": "Indoor Wheels",
+          "description": "Wheels for use in indoor parks",
+          "price": 13.99,
+          "category": 3,
+          "rating": 4.3,
+          "image_url": "",
+          "image": ""
+        }
+      },
+      {
+        "pk": 10,
+        "model": "products.product",
+        "fields": {
+          "sku": "gb0000000010",
+          "name": "SkateShack Deck",
+          "description": "Our very own deck",
+          "price": 23.99,
+          "category": 1,
+          "rating": 4.2,
+          "image_url": "",
+          "image": ""
+        }
+      }
+]
+
