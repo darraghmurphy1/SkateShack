@@ -19,7 +19,7 @@
       "fields": {
         "sku": "gb0000000002",
         "name": "Trucks",
-        "description": "Super-nutritious snack — perfect for spreading on toast, rice crackers, or your favourite fruit",
+        "description": "Stable set of trucks",
         "price": 33.50,
         "category": 2,
         "rating": 4.8,
@@ -51,8 +51,8 @@
         "price": 4.99,
         "category": 4,
         "rating": 4.8,
-        "image_url": "https://images.unsplash.com/photo-1551870573-6f5e93e660fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-        "image": "1551870573.jpg"
+        "image_url": "",
+        "image": ""
       }
     },
     {
