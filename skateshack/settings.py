@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -27,7 +28,7 @@ SECRET_KEY = 'django-insecure-8zup=ho7e%1(7hy9wqwtsk4_j_b22j%maou807z=+arhc!5741
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['skateshack.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -47,6 +48,10 @@ INSTALLED_APPS = [
     'products',
     'bag',
     'checkout',
+    'profiles',
+    'reviews',
+    'wishlist',
+    'newsletter',
 
     'crispy_forms',
 
@@ -94,7 +99,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',  # required by allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'django.template.context_processors.image',
+                'django.template.context_processors.media',
                 'bag.contexts.bag_contents',
             ],
             'builtins': [
@@ -120,12 +125,17 @@ WSGI_APPLICATION = 'skateshack.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 
 # Password validation
@@ -173,7 +183,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-darraghmurph-skateshack-3oxktqimyyx.ws-eu86.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-darraghmurph-skateshack-3oxktqimyyx.ws-eu88.gitpod.io','https://8000-darraghmurph-skateshack-3oxktqimyyx.ws-eu86.gitpod.io','https://8000-darraghmurph-skateshack-3oxktqimyyx.ws-eu87.gitpod.io']
+
 
 # Stripe
 FREE_DELIVERY_THRESHOLD = 100
