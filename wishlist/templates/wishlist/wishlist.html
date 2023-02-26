@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>{{ request.user }}'s Wishlist</h1>
+  <ul>
+    {% for item in wishlist %}
+      <li>{{ item.product }}</li>
+    {% empty %}
+      <li>Your wishlist is empty.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
