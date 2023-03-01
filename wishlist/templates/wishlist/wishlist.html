@@ -1,12 +1,54 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'reviews/css/reviews.css' %}">
+{% endblock %}
 
 {% block content %}
-  <h1>{{ request.user }}'s Wishlist</h1>
-  <ul>
-    {% for item in wishlist %}
-      <li>{{ item.product }}</li>
-    {% empty %}
-      <li>Your wishlist is empty.</li>
-    {% endfor %}
-  </ul>
+
+    <!-- Page overlay to cover image -->
+    <div class="overlay"></div>
+    <div class="container-fluid">
+
+        <!-- Reviews main header -->
+        <div class="row py-4 border-top border-bottom">
+            <div class="col text-center">
+                <h1 class="logo-text">My Wishlist</h1>
+            </div>
+        </div>
+
+        <!-- My reviews -->
+        <div class="row">
+            <div class="col-10 offset-1 col-lg-8 offset-lg-2">
+
+                <div class="review-container mt-4">
+                    {% if wishlists %}
+                        {% for wishlist in wishlists %}
+                            <div class="my-4 pb-4 border-bottom">
+                                <div class="wishlist-product">
+                                  
+
+                                    <a class="link-black" href="{% url 'product_detail' wishlist.product.id %}">
+                                        <h4 class="d-inline py-auto">{{wishlist.product.name }}</h4>                                        
+
+                                    </a>
+                                    <form method="POST" action="{% url 'delete_wishlist' wishlist.id %}">
+                                        {% csrf_token %}
+                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                      </form>
+                                </div>
+                            </div>
+                        {% endfor %}              
+                    {% else %}
+                        <p class="lead mb-5">You haven't review any products yet.</p>
+                        <a href="{% url 'products' %}" class="btn btn-main hvr-back-pulse btn-lg">
+                            <i class="fas fa-chevron-left"></i>
+                            <span class="text-uppercase">Explore Products</span>
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

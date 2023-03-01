@@ -9,12 +9,13 @@ from .forms import WishlistForm
 @login_required
 def show_wishlist(request):
     """ A view to show the user's product wishlists """
+    user = request.user
     wishlists = Wishlist.objects.filter(user=user)
 
     template = 'wishlist/wishlist.html'
 
     context = {
-        'wishlists': wishlisst,
+        'wishlists': wishlists,
     }
 
     return render(request, template, context)
@@ -60,13 +61,12 @@ def add_wishlist(request, product_id):
     return render(request, template, context)
 
 
-
 @login_required
 def delete_wishlist(request, wishlist_id):
     """ Delete an existing wishlist """
-    wishlists = get_object_or_404(Wishlist, pk=wishlist_id)
+    wishlist = get_object_or_404(Wishlist, pk=wishlist_id)
 
-    if request.user != wishlist.author:
+    if request.user != wishlist.user:
         messages.error(request, 'You are not authorized \
             to delete this wishlist.')
         return redirect(reverse('product_detail', args=[wishlist.product.id]))
@@ -76,4 +76,3 @@ def delete_wishlist(request, wishlist_id):
     print('wishlist', wishlist)
 
     return redirect(reverse('product_detail', args=[wishlist.product.id]))
-
