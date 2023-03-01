@@ -11,4 +11,6 @@ def index(request):
 def error(request):
     """ A view to display index page """
 
-    return render(request, 'templates/errors/404.html')
+    template: 'home/404.html'
+
+    return render(request, template)

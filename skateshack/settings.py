@@ -14,6 +14,9 @@ from pathlib import Path
 import os
 import dj_database_url
 
+if os.path.isfile('env.py'):
+    import env
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -61,13 +64,15 @@ SITE_ID = 1
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
-ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
-ACCOUNT_USERNAME_MIN_LENGTH = 4
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
+
+# Django allauth custom config
+ACCOUNT_UNIQUE_EMAIL = True
+ACCOUNT_USERNAME_REQUIRED = False
 
 WSGI_APPLICATION = 'skateshack.wsgi.application'
 
@@ -83,7 +88,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'skateshack.urls'
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_TEMPLATE_PACK = 'bootstrap'
 
 TEMPLATES = [
     {
@@ -183,7 +188,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-darraghmurph-skateshack-3oxktqimyyx.ws-eu88.gitpod.io','https://8000-darraghmurph-skateshack-3oxktqimyyx.ws-eu86.gitpod.io','https://8000-darraghmurph-skateshack-3oxktqimyyx.ws-eu87.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-darraghmurph-skateshack-3oxktqimyyx.ws-eu89.gitpod.io','https://8000-darraghmurph-skateshack-3oxktqimyyx.ws-eu86.gitpod.io','https://8000-darraghmurph-skateshack-3oxktqimyyx.ws-eu87.gitpod.io']
 
 
 # Stripe

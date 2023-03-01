@@ -1,20 +1,30 @@
 .jumbotron {
     background-size: cover;
-    color: #fff; /* set the text color to white */
-    text-shadow: 2px 2px #000; /* add a text shadow */
+    color: #000000; /* set the text color to white */
     padding: 100px 0; /* increase the padding for more space */
+
   }
   
+  strong {
+    color: #000;
+  }
   .jumbotron h1 {
     font-size: 4em; /* increase the font size of the heading */
     margin-bottom: 30px; /* add some margin at the bottom of the heading */
+    color: hotpink;
   }
   
   .jumbotron p {
     font-size: 1.5em; /* increase the font size of the paragraph */
     margin-bottom: 30px; /* add some margin at the bottom of the paragraph */
+
   }
-  
+
+  p {
+    max-width: 750px;
+    margin: auto;
+}
+
   .jumbotron .btn {
     background-color: #000; /* set the background color of the button */
     border: none; /* remove the button border */
@@ -23,9 +33,7 @@
     text-transform: uppercase; /* make the button text uppercase */
     margin-top: 30px; /* add some margin at the top of the button */
   }
-  
-  .jumbotron .btn:hover {
-    background-color: #fff; /* change the background color of the button on hover */
-    color: #000; /* change the text color of the button on hover */
+
+  img {
+    border-radius: 50px;
   }
-  

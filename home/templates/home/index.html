@@ -6,12 +6,15 @@
 {% endblock %}
 
 {% block content %}
+<div class="container-fluid" style= "margin-top: 75px;">
+  <div class="jumbotron text-center jumbo-container" background-size: cover;>
+    <img src="{{ MEDIA_URL }}skateshack2.png" alt="SkateShack2" style="max-width: 100%; height: auto;">
 
-  <div class="jumbotron text-center" style="background-image:; background-size: cover;">
-    <h1>Welcome to SkateShack!</h1>
-    <p>Your one stop shop for all your skateboarding needs. Here you can browse and purchase products from our store.</p>
-    <p><a class="btn btn-primary btn-lg" href="{% url 'products' %}" role="button">Shop Now</a></p>
+    <h1><strong>Skate</strong>Shack</h1>
+    <p>Your one stop shop for all your skateboarding needs. Whether you are a total beginner looking for your first skateboard or an experienced skater looking for some hardware or parts we will have something for you. Take a look around our online store:</p>
+    <p><a class="btn btn-primary btn-lg shop-now-button" href="{% url 'products' %}" role="button">Shop Now</a></p>
+    <img src="{{ MEDIA_URL }}skateshack.png" alt="SkateShack" style="max-width: 100%; height: auto;">
 
   </div>
-
+</div>
 {% endblock %}
