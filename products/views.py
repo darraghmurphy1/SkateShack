@@ -6,6 +6,7 @@ from django.db.models.functions import Lower
 
 from .models import Product, Category
 from .forms import ProductForm
+from reviews.models import Review
 
 # Create your views here.
 
@@ -65,14 +66,36 @@ def product_detail(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
+    product_reviews = Review.objects.filter(product=product)
+    sort = None
+    direction = None
+
+    if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'date':
+                sortkey = 'created_on'
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            product_reviews = product_reviews.order_by(sortkey)
+
+    favorite = False
+    if product.users_wishlist.filter(id=request.user.id).exists():
+        favorite = True
+
+    current_sorting = f'{sort}_{direction}'
 
     context = {
         'product': product,
+        'favorite': favorite,
+        'current_sorting': current_sorting,
+        'product_reviews': product_reviews,
     }
 
     return render(request, 'products/product_detail.html', context)
-
-
 @login_required
 def add_product(request):
     """ Add a product to the store """

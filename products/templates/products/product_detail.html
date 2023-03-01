@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'products/css/products.css' %}">
+{% endblock %}
+
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -26,7 +30,7 @@
                     {% endif %}
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4 text-black">
                 <div class="product-details-container mb-5 mt-md-5">
                     <p class="mb-0">{{ product.name }}</p>
                     <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
@@ -64,21 +68,11 @@
                                 <p class="mt-3"><strong>Quantity:</strong></p>
                                 <div class="form-group w-50">
                                     <div class="input-group input-group-{{ product.id }}">
-                                        <div class="input-group-prepend">
-                                            <button class="decrement-qty btn btn-black rounded-0 decrement-qty_{{ product.id }}" 
-                                                data-item_id="{{ product.id }}">
-                                               
-                                            </button>
-                                        </div>
+
                                         <input class="form-control qty_input id_qty_{{ product.id }}" type="number"
                                             name="quantity" value="1" min="1" max="99"
                                             data-item_id="{{ product.id }}">
-                                        <div class="input-group-append">
-                                            <button class="increment-qty btn btn-black rounded-0 increment-qty_{{ product.id }}"
-                                                data-item_id="{{ product.id }}">
-                                               
-                                            </button>
-                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -94,22 +88,52 @@
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             {% endwith %}
+                            <div class="col-12">
                             {% if user.is_authenticated %}
-								
-                                    <a class="text-info" href="{% url 'add_review' product_id=product.id %}">Add a review</a> 
-                                    <a class="text-info" href="{% url 'add_to_wishlist' product_id=product.id %}">Add to wishlist</a> 
-                                    <form method="post" action="">
-                                        {% csrf_token %}
-                                        <input type="submit" value="Add to Wishlist">
-                                    </form>
-                                
+                              <button style="font-size: 14px; background-color: black; color: hotpink; height: 25px; margin-top: 5px;">
+                                <a href="{% url 'add_review' product_id=product.id %}" style="text-decoration: none; color: inherit;">Add a Review</a>
+                              </button>
+                              
+                              <button style="font-size: 14px; background-color: black; color: hotpink; height: 25px; margin-top: 5px;">
+                                <a href="{% url 'wishlist_add' product_id=product.id %}" style="text-decoration: none; color: inherit;">Add to wishlist</a>
+                              </button>
+                              
 							{% endif %}
+                            </div>
+
                         </div>
                     </form>
+                     <!-- Product reviews -->
+
+                     {% if product_reviews %}
+    
+                     <div class="review-container mt-4">
+                         {% for review in product_reviews %}
+                             <div class="my-4 border-bottom">
+                                 <h5>{{ review.title }}</h5>
+                                 <p>{{ review.content }}</p>
+                                 <p class="c--light-blue"><i class="fas fa-star me-1"></i>{{ review.rating }} / 5</p>
+                                 <p class="text-muted d-inline small">By {{ review.author }} on {{ review.created_at }}</p>
+                                 {% if review.author == request.user %}
+                                     <small class="ms-3 float-end">
+                                         <a href="{% url 'edit_review' review.id %}" class="update-link link-dark">Edit</a> |
+                                         <a href="{% url 'delete_review' review.id %}" class="remove-item link-blue float-right" id="remove_{{ item.item_id }}">Delete</a>
+                                     </small>
+                                 {% endif %}
+                             </div>
+                         {% endfor %}
+                     </div>
+                 {% else %}
+                     <div class="my-4">
+                         No reviews for this product yet.
+                     </div>
+                 {% endif %}
+                 </div>
                 </div>
             </div>
         </div>
     </div>
+                   
 {% endblock %}
 
 {% block postloadjs %}
