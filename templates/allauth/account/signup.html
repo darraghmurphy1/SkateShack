@@ -13,8 +13,8 @@
 <div class="container mt-5">
   <div class="row justify-content-center">
     <div class="col-md-6">
-      <div class="card">
-        <div class="card-header bg-primary text-white">
+      <div class="card" style="margin-top: 10%">
+        <div class="card-header bg-white text-black">
           <h2 class="text-center mb-0">Create a New Account</h2>
         </div>
         <div class="card-body">
@@ -24,7 +24,7 @@
   {% if redirect_field_value %}
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
-  <button type="submit" class="btn btn-primary btn-block mt-4">{% trans "Sign Up" %} &raquo;</button>
+  <button type="submit" class="btn btn-primary btn-block mt-4" style="background-color: black;">{% trans "Sign Up" %} &raquo;</button>
 </form>
 </div>
 </div>
