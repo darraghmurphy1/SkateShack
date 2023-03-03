@@ -20,47 +20,47 @@
 
 ### User Goals
 
-- As a shopper, I want to easily find the products and their details.
+- As a user, I want to easily find the products and their details.
 
-- As a shopper, I want to view products on a specific category.
+- As a user, I want to view products on a specific category.
 
-- As a shopper, I want to be able to sort the products depending on their price, rating or category.
+- As a user, I want to be able to sort the products depending on their price, rating or category.
 
-- As a shopper, I want to be able to search for products using specific keywords.
+- As a user, I want to be able to search for products using specific keywords.
 
-- As a shopper, I want to easily select the quantity of products to be purchased.
+- As a user, I want to easily select the quantity of products to be purchased.
 
-- As a shopper, I want to easily view the current purchase amount.
+- As a user, I want to easily view the current purchase amount.
 
-- As a shopper, I want to view all items currently on my shopping bag and be able to update them.
+- As a user, I want to view all items currently on my shopping bag and be able to update them.
 
-- As a shopper, I want to easily provide my shipping and payment information during the checkout.
+- As a user, I want to easily provide my shipping and payment information during the checkout.
 
-- As a shopper, I want to feel my personal and payment data is being handled securely.
+- As a user, I want to feel my personal and payment data is being handled securely.
 
-- As a shopper, I want to receive an order confirmation once I have finished my purchase.
+- As a user, I want to receive an order confirmation once I have finished my purchase.
 
-- As a shopper, I want to receive an order confirmation email for my records.
+- As a user, I want to receive an order confirmation email for my records.
 
-- As a frequent shopper, I want to be able to register an account using my email address to be able to keep my records and interact with the website.
+- As a frequent user, I want to be able to register an account using my email address to be able to keep my records and interact with the website.
 
-- As a frequent shopper, I want to receive a confirmation once my account has been registered to make sure the information entered was correctly.
+- As a frequent user, I want to receive a confirmation once my account has been registered to make sure the information entered was correctly.
 
-- As a registered shopper, I want to easily log in and out from my account.
+- As a registered user, I want to easily log in and out from my account.
 
-- As a registered shopper, I want to be able to recover access to my account in case I forget my password.
+- As a registered user, I want to be able to recover access to my account in case I forget my password.
 
-- As a registered shopper, I want to have a personalized profile page where I can keep my contact information updated and see my past orders.
+- As a registered user, I want to have a personalized profile page where I can keep my contact information updated and see my past orders.
 
-- As a shopper, I want to be able to read product reviews left by other shoppers.
+- As a user, I want to be able to read product reviews left by other users.
 
-- As a shopper, I want to be able to sort the reviews by date or rating.
+- As a user, I want to be able to sort the reviews by date or rating.
 
-- As a registered shopper, I want to be able to leave product reviews and rate the products.
+- As a registered user, I want to be able to leave product reviews and rate the products.
 
-- As a registered shopper, I want to be able to keep a list of my favorite products to purchase again in the future.
+- As a registered user, I want to be able to keep a list of my favorite products to purchase again in the future.
 
-- As a registered shopper, I want to be able to easily add and remove favorite products.
+- As a registered user, I want to be able to easily add and remove favorite products.
 
 - As a site admin, I want to be able to add and update products.
 
@@ -69,7 +69,7 @@
 - As a site admin, I want to give the users the opportunity to support organizations helping to reduce plastic waste.
 Epic 8 - Newsletter Subscription
 
-- As a site admin, I want shoppers to be able to provide their contact information to be able to reach out to them with information and offers.
+- As a site admin, I want users to be able to provide their contact information to be able to reach out to them with information and offers.
 
 
 ### User Stories
@@ -84,7 +84,7 @@ insert heirarchy
 
 - Links and forms provide clear feedback to the site user.
 
-- New additional content features are provided for the shopper once they register an account.
+- New additional content features are provided for the user once they register an account.
  
 - A 404-error page is available.
 
@@ -168,27 +168,42 @@ Our marketing strategy includes leveraging social media platforms like Instagram
 
 ### General
 
-- List the general features of the project.
+- Every page has access to the navigation bar with navigation to every product type etc.
+
+- Every page has access to viewing the total in a customer's basket.
+
+- Theres is a footer on every page.
+
+- There is a drop down menu to access a user's profile as well as their wishlist and reviews that they have submitted.
+
+- The header features on every page and changes based on the size of the user's screen.
+
 
 ### Home Page
 
-- Describe the layout and content of the home page.
+- The home page is layed out with two relevant images and a link to the products page.
+
+- It has a paragraph describing the site in accordance with SEO.
 
 ### Products Page
 
-- Describe the layout and content of the products page.
+- Products are laid out simply with each product having its own information
 
 ### Product Details Page
 
-- Describe the layout and content of the product details page.
+- The product detail page shows the selected product in more information.
+
+- On this page there are buttons to add an item to bag, wishlist or write a review. 
 
 ### Products Admin
 
-- Describe the admin features related to the products page.
+- Here is a form for an admin user to edit or create products. 
 
 ### Shopping Bag Page
 
-- Describe the layout and content of the shopping bag page.
+- The shopping bag page displays the items the user has placed in their bag.
+
+- This can be edited or deleted
 
 ### Checkout Page
 
@@ -200,31 +215,24 @@ Our marketing strategy includes leveraging social media platforms like Instagram
 
 ### Profile Page
 
-- Describe the layout and content of the user profile page.
+- Profile page contains recent orders and delivery information.
 
-### Favorites Page
+### Wishlist Page
 
 - Describe the layout and content of the user favorites page.
 
 ### Reviews Page
 
-- Describe the layout and content of the user reviews page.
+- Displays the user's wishlist with a link to product and a delete button.
 
-### Reviews Admin
-
-- Describe the admin features related to the user reviews page.
-
-### Organizations Page
-
-- Describe the layout and content of the organizations page.
 
 ### Accounts Pages
 
-- Describe the layout and content of the user accounts pages.
+- The log in/out pages as well as registration contain django forms.
 
 ### 404 Error Page
 
-- Describe the layout and content of the 404 error page.
+- Simple 404 message in the style of the site
 
 ## Technologies Used
 
