@@ -14,6 +14,7 @@
 {% endblock %}
 
 {% block content %}
+<!-- product list -->
     <div class="overlay"></div>
     <div class="container-fluid">
         <div class="row">
@@ -87,6 +88,7 @@
                                                 <small class="text-muted">No Rating</small>
                                             {% endif %}
                                             {% if request.user.is_superuser %}
+                                            <!-- admin product management -->
                                                 <small class="ml-3">
                                                     <a href="{% url 'edit_product' product.id %}">Edit</a> | 
                                                     <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
@@ -122,6 +124,7 @@
             </div>
         </div>
     </div>
+    <!-- back to top arrow -->
     <div class="btt-button shadow-sm rounded-0 border border-black">
         <a class="btt-link d-flex h-100">
             <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>

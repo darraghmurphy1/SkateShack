@@ -74,7 +74,12 @@ Epic 8 - Newsletter Subscription
 
 ### User Stories
 
-- insert agile screenshots 
+![Website Screenshots](readmemedia/chrome_jcELflPUVE.png)
+![Website Screenshots](readmemedia/chrome_BazUzlL2DO.png)
+![Website Screenshots](readmemedia/chrome_c1GHud0hZ7.png)
+![Website Screenshots](readmemedia/chrome_ApRkXbPAKY.png)
+![Website Screenshots](readmemedia/chrome_c1GHud0hZ7.png)
+![Website Screenshots](readmemedia/chrome_J0sECCDzZa.png)
 
 ### Structure
 
@@ -96,7 +101,13 @@ insert heirarchy
 
 ### Skeleton
 
-- wireframes.
+- wireframes
+
+![Website Screenshots](readmemedia/BalsamiqWireframes_w54Op3CjKP.png)
+![Website Screenshots](readmemedia/BalsamiqWireframes_rmJ019k6Ty.png)
+![Website Screenshots](readmemedia/BalsamiqWireframes_JISEMvDZlT.png)
+![Website Screenshots](readmemedia/BalsamiqWireframes_HZpcr4C8kG.png)
+![Website Screenshots](readmemedia/BalsamiqWireframes_CPF2v3QoTN.png)
 
 The color scheme of this project features a minimalist combination of black and white with hot pink accents. The black and white provide a classic and clean backdrop, while the hot pink adds an exciting accent to break up the monochrome.
 
@@ -104,13 +115,6 @@ The black and white colors are primarily used for text, backgrounds, and borders
 
 Overall, the color scheme strikes a balance between simplicity and vibrancy that suits the project's style and tone. It adds signature without overwhelming the user or distracting from the content.
 
-### Surface
-
-- Describe the website's visual design elements, including the color scheme, typography, and imagery.
-
-## Marketing
-
-- Outline the marketing and promotion strategies for the project.
 
 ## Search Engine Optimisation
 
@@ -185,9 +189,13 @@ Our marketing strategy includes leveraging social media platforms like Instagram
 
 - It has a paragraph describing the site in accordance with SEO.
 
+![Website Screenshots](readmemedia/chrome_rV1yxhitIT.png)
+
 ### Products Page
 
 - Products are laid out simply with each product having its own information
+
+![Website Screenshots](readmemedia/chrome_k16ciJyIkI.png)
 
 ### Product Details Page
 
@@ -195,9 +203,13 @@ Our marketing strategy includes leveraging social media platforms like Instagram
 
 - On this page there are buttons to add an item to bag, wishlist or write a review. 
 
+![Website Screenshots](readmemedia/chrome_8rus9pgEjG.png)
+
 ### Products Admin
 
-- Here is a form for an admin user to edit or create products. 
+- a form for an admin user to edit or create products. 
+
+
 
 ### Shopping Bag Page
 
@@ -205,26 +217,31 @@ Our marketing strategy includes leveraging social media platforms like Instagram
 
 - This can be edited or deleted
 
+![Website Screenshots](readmemedia/chrome_1EuGSwdH5E.png)
+
 ### Checkout Page
 
-- Describe the layout and content of the checkout page.
 
 ### Checkout Success Page
 
-- Describe the layout and content of the checkout success page.
 
 ### Profile Page
 
 - Profile page contains recent orders and delivery information.
 
+![Website Screenshots](readmemedia/chrome_ENARnFAg7Q.png)
+
 ### Wishlist Page
 
 - Describe the layout and content of the user favorites page.
+
+![Website Screenshots](readmemedia/chrome_aJvT2FJgwQ.png)
 
 ### Reviews Page
 
 - Displays the user's wishlist with a link to product and a delete button.
 
+![Website Screenshots](readmemedia/chrome_WR692KwgM0.png)
 
 ### Accounts Pages
 
@@ -292,13 +309,117 @@ Gunicorn was used as Python WSGI HTTP Server for UNIX to support the deployment 
 
 ## Testing
 
-- Go to TESTING.md
+### User Stories
+
+
+
+### General Testing
+
+Element | Expected Outcome | Pass/Fail |
+--- | --- | --- |
+My Account Icon - Register Link | Clicking the link redirects to the account sign up page. | Pass |
+My Account Icon - Login Link | Clicking the link redirects to the account sign in page. | Pass |
+My Account Icon - Logout link | Clicking the link redirects to the account sign out page. | Pass |
+My Account Icon - Product Management Link | Clicking the link redirects to the add product page. | Pass |
+My Account Icon - My Profile Link | Clicking the link redirects to the profile page. | Pass |
+My Account Icon - My Reviews Link | Clicking the link redirects to the reviews page. | Pass |
+Shopping Cart Icon | Clicking the link redirects to the shopping cart. | Pass |
+Search Bar | Clicking the link redirects to the products page and display the matching products. | Pass |
+Facebook Icon | Clicking the link open the business Facebook page on a separate tab. | Pass |
+
+### Homepage Testing 
+
+Element | Expected Outcome | Pass/Fail |
+--- | --- | --- |
+Categories Links | Clicking any of the links will redirect to the products page and filter the products on that category. | Pass |
+Product Navigation Bar Links | All links work successfully | Pass
+Shop Now Button | Brings user to products | Pass
+
+### Product Detail/Products Testing 
+
+Element | Expected Outcome | Pass/Fail |
+--- | --- | --- |
+Product Image | Clicking the image opens it on a separate tab. | Pass |
+Wishlist button | Successfully adds to wishlist | Pass |
+Product Edit Link | Opens edit product form. | Pass |
+Product Delete Link | Deletes item successfully | Pass |
+Keep Shopping Button | Sucesfully brings back to product. | Pass |
+Add To Bag Button | Adds item to basket | Pass |
+Sort By Selector | Sorts items according to sorting preference | Pass |
+Review Edit Link | Enters edit review form | Pass |
+Review Delete Link | Successfully deletes review | Pass |
+Leave A Review Button | Enters the review form | Pass |
+
+
+### Wishlist Testing 
+
+Element | Expected Outcome | Pass/Fail |
+--- | --- | --- |
+Product Link | Links to item. | Pass |
+Delete | Deletes item from wishlist | Pass |
+
+### Review Testing 
+
+Element | Expected Outcome | Pass/Fail |
+--- | --- | --- |
+Product Link | Clicking the link redirect to the product details page. | Pass |
+Edit Link | Clicking the link redirect to the edit review page. | Pass |
+Delete Link | Clicking the link deletes the review | Pass |
+Add Review Form | Review added | Pass |
+Cancel Button | successfully cancels review | Pass |
+Edit Review Form | Review edited | Pass |
+Cancel Button | successfully cancels review | Pass |
+
+### Bag Testing 
+
+Element | Expected Outcome | Pass/Fail |
+--- | --- | --- |
+Edit Quantity | Whatever number is displayed in the box is added to bag | Pass |
+Update Link | Updates quantity | Pass
+Delete Link | Deletes item | Pass
+Keep Shopping Button | Redirects the user | Pass |
+Secure Checkout Button | Redirects to checkout. | Pass |
+
+### Checkout Testing 
+
+### Profile Testing
+
+Element | Expected Outcome | Pass/Fail |
+--- | --- | --- |
+Update Information Form | User's information gets updated when submitting the form. | Pass |
+Order Link | Clicking the link redirects to order view. | Pass |
+
+### Newsletter Testing 
+
+Element | Expected Outcome | Pass/Fail |
+--- | --- | --- |
+Add Subscriber | User is added to newsletter list | Pass |
+
+### Log In/Out, Registration
+
+Element | Expected Outcome | Pass/Fail |
+--- | --- | --- |
+Log In page | User successfully logs into the site | Pass |
+Log out page | User successfully logs out of the site | Pass |
+Create Account | User successfully creates account for the site | Pass |
+
+
+### Product Admin
+
+Element | Expected Outcome | Pass/Fail |
+--- | --- | --- |
+Add Product Form | Product is added | Pass |
+Cancel Button | Cancel button exits form | Pass |
+Edit Product Form | Product is edited | Pass |
+Cancel Button | Cancel button exits form | Pass |
+
+### Code Validation 
+
+### Lighthouse 
+
+
 
 ## Deployment
-
-### How To Use This Project
-
-- Provide instructions for using the project.
 
 
 ### Deployment to Heroku 
@@ -542,18 +663,16 @@ Create a custom_storages.py file in your project's root directory, and inside it
 
 
 
-### Finished Product
-
-- Describe the finished product.
-
-## Credits
-
-- List the contributors and resources used in the project.
-
 ## Known Bugs
 
-- List the known bugs and issues in the project.
+- Wishlist item appears with a dropdown box despite not making a difference what product is selected.
 
 ## Acknowledgements
 
-- Thank the contributors and people who helped with the project.
+- Code Institute 
+
+- Marcel Mulders 
+
+- Booutique Ado Walkthrough 
+
+- Stack Overflow

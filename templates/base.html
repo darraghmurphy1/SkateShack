@@ -38,6 +38,7 @@
     <title>SkateShack {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
+    <!-- main header -->
     <header class="container-fluid fixed-top">
         <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
@@ -45,6 +46,7 @@
                     <h2 class="logo-font text-black logo my-0"><strong>Skate</strong> Shack</h2>
                 </a>
             </div>
+            <!-- search function -->
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
@@ -59,6 +61,7 @@
                     </div>
                 </form>
             </div>
+            <!-- dropdown for personal account menu -->
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
@@ -109,6 +112,7 @@
                 {% include 'includes/navbar.html' %}
             </nav>
         </div>
+        <!-- banner advertising free delivery -->
         <div id="delivery-banner" class="row text-center">
             <div class="col">
                 <h4 class="logo-font my-1">Free delivery on orders over ${{ free_delivery_threshold }}!</h4>                
@@ -117,6 +121,7 @@
     </header>
 
     {% if messages %}
+    <!-- toasts -->
         <div class="message-container">
             {% for message in messages %}
                 {% with message.level as level %}
@@ -148,10 +153,12 @@
 
     
   </body>
+  <!-- footer -->
   <footer class="footer">
     <div class="footercontainer">
       <div class="footercontent">
         {% if request.user.is_authenticated %}
+        <!-- subscribe to newsletter form -->
         <div class="col-md-4">
             <form method="POST" action="{% url 'newsletters' %}" id="newsletter-form" class="text-muted form mb-5"
             enctype="multipart/form-data">
@@ -162,6 +169,7 @@
             </div>
           </form>
         {% endif %}
+        <!-- contact information -->
         <div class="col-md-4">
           <h4>Connect With Us</h4>
           <ul class="list-unstyled">

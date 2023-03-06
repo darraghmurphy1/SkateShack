@@ -1,3 +1,4 @@
+<!-- products by sorting -->
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown">
@@ -16,14 +17,12 @@
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="completes-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Complete Skateboards
             </a>
+            <!-- complete skateboard links -->
             <div class="dropdown-menu border-0" aria-labelledby="completes-link">
-                <a href="{% url 'products' %}?category=completes" class="dropdown-item">Beginner</a>
-                <a href="{% url 'products' %}?category=completes" class="dropdown-item">Intermediate</a>
-                <a href="{% url 'products' %}?category=completes" class="dropdown-item">Pro</a>
                 <a href="{% url 'products' %}?category=completes" class="dropdown-item">All</a>
             </div>
         </li>
-
+            <!-- hardware links -->
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="hardware-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Hardware
