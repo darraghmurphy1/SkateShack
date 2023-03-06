@@ -18,58 +18,6 @@
 
 - An overall easy experience for a customer.
 
-### User Goals
-
-- As a user, I want to easily find the products and their details.
-
-- As a user, I want to view products on a specific category.
-
-- As a user, I want to be able to sort the products depending on their price, rating or category.
-
-- As a user, I want to be able to search for products using specific keywords.
-
-- As a user, I want to easily select the quantity of products to be purchased.
-
-- As a user, I want to easily view the current purchase amount.
-
-- As a user, I want to view all items currently on my shopping bag and be able to update them.
-
-- As a user, I want to easily provide my shipping and payment information during the checkout.
-
-- As a user, I want to feel my personal and payment data is being handled securely.
-
-- As a user, I want to receive an order confirmation once I have finished my purchase.
-
-- As a user, I want to receive an order confirmation email for my records.
-
-- As a frequent user, I want to be able to register an account using my email address to be able to keep my records and interact with the website.
-
-- As a frequent user, I want to receive a confirmation once my account has been registered to make sure the information entered was correctly.
-
-- As a registered user, I want to easily log in and out from my account.
-
-- As a registered user, I want to be able to recover access to my account in case I forget my password.
-
-- As a registered user, I want to have a personalized profile page where I can keep my contact information updated and see my past orders.
-
-- As a user, I want to be able to read product reviews left by other users.
-
-- As a user, I want to be able to sort the reviews by date or rating.
-
-- As a registered user, I want to be able to leave product reviews and rate the products.
-
-- As a registered user, I want to be able to keep a list of my favorite products to purchase again in the future.
-
-- As a registered user, I want to be able to easily add and remove favorite products.
-
-- As a site admin, I want to be able to add and update products.
-
-- As a site admin, I want to be able to remove product no longer available.
-
-- As a site admin, I want to give the users the opportunity to support organizations helping to reduce plastic waste.
-Epic 8 - Newsletter Subscription
-
-- As a site admin, I want users to be able to provide their contact information to be able to reach out to them with information and offers.
 
 
 ### User Stories
@@ -221,9 +169,7 @@ Our marketing strategy includes leveraging social media platforms like Instagram
 
 ### Checkout Page
 
-
-### Checkout Success Page
-
+![checkout](readmemedia/chrome_oeqSPLkDFv.png)
 
 ### Profile Page
 
@@ -308,10 +254,6 @@ Gunicorn was used as Python WSGI HTTP Server for UNIX to support the deployment 
 - Heroku
 
 ## Testing
-
-### User Stories
-
-
 
 ### General Testing
 
@@ -414,6 +356,8 @@ Edit Product Form | Product is edited | Pass |
 Cancel Button | Cancel button exits form | Pass |
 
 ### Code Validation 
+
+Passes through jshint, css and html validators W3. Python passed through gitpod.
 
 ### Lighthouse 
 
