@@ -45,7 +45,7 @@ insert heirarchy
 
 ### Database Model
 
-- insert database model 
+![ERD](readmemedia/ApplicationFrameHost_UTZQLjcjy2.png)
 
 ### Skeleton
 
