@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['skateshack.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['skateshack.herokuapp.com', 'localhost', 'https://8000-darraghmurph-skateshack-0uqixk6xlfs.ws-eu96.gitpod.io/']
 
 
 # Application definition
@@ -62,8 +62,6 @@ INSTALLED_APPS = [
 ]
 
 SITE_ID = 1
-
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
