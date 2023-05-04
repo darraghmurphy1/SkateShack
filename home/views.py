@@ -2,6 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 
+
 def index(request):
     """ A view to display index page """
 
@@ -9,7 +10,7 @@ def index(request):
 
 
 def error(request):
-    """ A view to display index page """
+    """ A view to display error page """
 
     template: 'home/404.html'
 
