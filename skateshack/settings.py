@@ -31,9 +31,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['skateshack.herokuapp.com', 'localhost', 'https://8000-darraghmurph-skateshack-0uqixk6xlfs.ws-eu96b.gitpod.io/']
+ALLOWED_HOSTS = ['skateshack.herokuapp.com', 'localhost', ]
 
-
+CSRF_TRUSTED_ORIGINS = ['https://8000-darraghmurph-skateshack-0uqixk6xlfs.ws-eu96b.gitpod.io']
 # Application definition
 
 INSTALLED_APPS = [
